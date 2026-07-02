@@ -62,6 +62,7 @@
     "test": "npm run lint && vitest run",
     "test:watch": "vitest",
     "test:single": "vitest run",
+    "test:functional": "vitest run test/functional",
     "test:browser": "vitest run --config vitest.browser.config.mjs",
     "test:browserstack": "browserstack-node-sdk playwright test --config playwright.bstack.config.js",
     "perf": "node scripts/build-testbundle.mjs && node -e \"const p=require('./test/performance/performance.js');p.runTests();p.generateLogs();\""

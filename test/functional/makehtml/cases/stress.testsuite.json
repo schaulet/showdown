@@ -1,0 +1,1833 @@
+[
+  {
+    "name": "single-open-div",
+    "markdown": "<div>",
+    "html": "<p><div></p>",
+    "section": "malformed-html-open-only",
+    "number": 1,
+    "options": {}
+  },
+  {
+    "name": "single-open-a",
+    "markdown": "<a>",
+    "html": "<p><a></p>",
+    "section": "malformed-html-open-only",
+    "number": 2,
+    "options": {}
+  },
+  {
+    "name": "open-b-i",
+    "markdown": "<b><i>",
+    "html": "<p><b><i></p>",
+    "section": "malformed-html-open-only",
+    "number": 3,
+    "options": {}
+  },
+  {
+    "name": "open-chain",
+    "markdown": "<div><span><p>",
+    "html": "<p><div><span><p></p>",
+    "section": "malformed-html-open-only",
+    "number": 4,
+    "options": {}
+  },
+  {
+    "name": "open-list",
+    "markdown": "<ul><li>",
+    "html": "<p><ul><li></p>",
+    "section": "malformed-html-open-only",
+    "number": 5,
+    "options": {}
+  },
+  {
+    "name": "open-with-attr",
+    "markdown": "<a href=\"x\">",
+    "html": "<p><a href=\"x\"></p>",
+    "section": "malformed-html-open-only",
+    "number": 6,
+    "options": {}
+  },
+  {
+    "name": "open-table",
+    "markdown": "<table><tr><td>",
+    "html": "<p><table><tr><td></p>",
+    "section": "malformed-html-open-only",
+    "number": 7,
+    "options": {}
+  },
+  {
+    "name": "open-em-strong",
+    "markdown": "<em><strong>text",
+    "html": "<p><em><strong>text</p>",
+    "section": "malformed-html-open-only",
+    "number": 8,
+    "options": {}
+  },
+  {
+    "name": "single-close-div",
+    "markdown": "</div>",
+    "html": "<p></div></p>",
+    "section": "malformed-html-close-only",
+    "number": 9,
+    "options": {}
+  },
+  {
+    "name": "single-close-a",
+    "markdown": "</a>",
+    "html": "<p></a></p>",
+    "section": "malformed-html-close-only",
+    "number": 10,
+    "options": {}
+  },
+  {
+    "name": "close-b-i",
+    "markdown": "</b></i>",
+    "html": "<p></b></i></p>",
+    "section": "malformed-html-close-only",
+    "number": 11,
+    "options": {}
+  },
+  {
+    "name": "close-chain",
+    "markdown": "</div></span></p>",
+    "html": "<p></div></span></p></p>",
+    "section": "malformed-html-close-only",
+    "number": 12,
+    "options": {}
+  },
+  {
+    "name": "lonely-close-after-text",
+    "markdown": "text</b>more",
+    "html": "<p>text</b>more</p>",
+    "section": "malformed-html-close-only",
+    "number": 13,
+    "options": {}
+  },
+  {
+    "name": "b-close-i",
+    "markdown": "<b>x</i>",
+    "html": "<p><b>x</i></p>",
+    "section": "malformed-html-misaligned",
+    "number": 14,
+    "options": {}
+  },
+  {
+    "name": "crossed",
+    "markdown": "<b><i>x</b></i>",
+    "html": "<p><b><i>x</b></i></p>",
+    "section": "malformed-html-misaligned",
+    "number": 15,
+    "options": {}
+  },
+  {
+    "name": "div-span-crossed",
+    "markdown": "<div><span></div></span>",
+    "html": "<div><span></div>\n<p></span></p>",
+    "section": "malformed-html-misaligned",
+    "number": 16,
+    "options": {}
+  },
+  {
+    "name": "a-close-b",
+    "markdown": "<a href=\"x\">y</b>",
+    "html": "<p><a href=\"x\">y</b></p>",
+    "section": "malformed-html-misaligned",
+    "number": 17,
+    "options": {}
+  },
+  {
+    "name": "open-close-mismatch",
+    "markdown": "<strong>x</em>",
+    "html": "<p><strong>x</em></p>",
+    "section": "malformed-html-misaligned",
+    "number": 18,
+    "options": {}
+  },
+  {
+    "name": "extra-close",
+    "markdown": "<b>x</b></b></b>",
+    "html": "<p><b>x</b></b></b></p>",
+    "section": "malformed-html-misaligned",
+    "number": 19,
+    "options": {}
+  },
+  {
+    "name": "interleaved",
+    "markdown": "<a><b></a></b>",
+    "html": "<p><a><b></a></b></p>",
+    "section": "malformed-html-misaligned",
+    "number": 20,
+    "options": {}
+  },
+  {
+    "name": "unclosed-dquote",
+    "markdown": "<a href=\"unclosed>text",
+    "html": "<p><a href=\"unclosed>text</p>",
+    "section": "malformed-html-unclosed-attr",
+    "number": 21,
+    "options": {}
+  },
+  {
+    "name": "unclosed-squote",
+    "markdown": "<a href='x",
+    "html": "<p>&lt;a href='x</p>",
+    "section": "malformed-html-unclosed-attr",
+    "number": 22,
+    "options": {}
+  },
+  {
+    "name": "empty-attr-eq",
+    "markdown": "<a href=>x</a>",
+    "html": "<p><a href=>x</a></p>",
+    "section": "malformed-html-unclosed-attr",
+    "number": 23,
+    "options": {}
+  },
+  {
+    "name": "half-attr",
+    "markdown": "<a b=\"c\" d='e",
+    "html": "<p>&lt;a b=&quot;c&quot; d='e</p>",
+    "section": "malformed-html-unclosed-attr",
+    "number": 24,
+    "options": {}
+  },
+  {
+    "name": "attr-no-val",
+    "markdown": "<input disabled>",
+    "html": "<p><input disabled></p>",
+    "section": "malformed-html-unclosed-attr",
+    "number": 25,
+    "options": {}
+  },
+  {
+    "name": "attr-weird",
+    "markdown": "<a =\"x\">y</a>",
+    "html": "<p><a =\"x\">y</a></p>",
+    "section": "malformed-html-unclosed-attr",
+    "number": 26,
+    "options": {}
+  },
+  {
+    "name": "double-angle",
+    "markdown": "<<>>",
+    "html": "<p>&lt;&lt;&gt;&gt;</p>",
+    "section": "malformed-html-garbage",
+    "number": 27,
+    "options": {}
+  },
+  {
+    "name": "space-in-angle",
+    "markdown": "< >",
+    "html": "<p>< ></p>",
+    "section": "malformed-html-garbage",
+    "number": 28,
+    "options": {}
+  },
+  {
+    "name": "empty-angle",
+    "markdown": "<>",
+    "html": "<p>&lt;&gt;</p>",
+    "section": "malformed-html-garbage",
+    "number": 29,
+    "options": {}
+  },
+  {
+    "name": "slash-slash",
+    "markdown": "<//>",
+    "html": "<p><//></p>",
+    "section": "malformed-html-garbage",
+    "number": 30,
+    "options": {}
+  },
+  {
+    "name": "bang",
+    "markdown": "<!>",
+    "html": "<p><!></p>",
+    "section": "malformed-html-garbage",
+    "number": 31,
+    "options": {}
+  },
+  {
+    "name": "open-no-close",
+    "markdown": "<a",
+    "html": "<p>&lt;a</p>",
+    "section": "malformed-html-garbage",
+    "number": 32,
+    "options": {}
+  },
+  {
+    "name": "close-no-open",
+    "markdown": "a>",
+    "html": "<p>a&gt;</p>",
+    "section": "malformed-html-garbage",
+    "number": 33,
+    "options": {}
+  },
+  {
+    "name": "eq-tag",
+    "markdown": "<=x>",
+    "html": "<p><=x></p>",
+    "section": "malformed-html-garbage",
+    "number": 34,
+    "options": {}
+  },
+  {
+    "name": "nested-angle",
+    "markdown": "<a<b>c>",
+    "html": "<p>&lt;a<b>c&gt;</p>",
+    "section": "malformed-html-garbage",
+    "number": 35,
+    "options": {}
+  },
+  {
+    "name": "bang-dash",
+    "markdown": "<!-x->",
+    "html": "<p><!-x-></p>",
+    "section": "malformed-html-garbage",
+    "number": 36,
+    "options": {}
+  },
+  {
+    "name": "many-lt",
+    "markdown": "<<<<<",
+    "html": "<p>&lt;&lt;&lt;&lt;&lt;</p>",
+    "section": "malformed-html-garbage",
+    "number": 37,
+    "options": {}
+  },
+  {
+    "name": "many-gt",
+    "markdown": ">>>>>",
+    "html": "<blockquote>\n  <blockquote>\n    <blockquote>\n      <blockquote>\n        <p>&gt;</p>\n      </blockquote>\n    </blockquote>\n  </blockquote>\n</blockquote>",
+    "section": "malformed-html-garbage",
+    "number": 38,
+    "options": {}
+  },
+  {
+    "name": "lt-gt-mix",
+    "markdown": "<><><>",
+    "html": "<p>&lt;&gt;&lt;&gt;&lt;&gt;</p>",
+    "section": "malformed-html-garbage",
+    "number": 39,
+    "options": {}
+  },
+  {
+    "name": "numeric-tag",
+    "markdown": "<123>x</123>",
+    "html": "<p><123>x</123></p>",
+    "section": "malformed-html-weird-tags",
+    "number": 40,
+    "options": {}
+  },
+  {
+    "name": "namespaced",
+    "markdown": "<a:b:c>x</a:b:c>",
+    "html": "<p><a:b:c>x</a:b:c></p>",
+    "section": "malformed-html-weird-tags",
+    "number": 41,
+    "options": {}
+  },
+  {
+    "name": "underscore-tag",
+    "markdown": "<_>x</_>",
+    "html": "<p><_>x</_></p>",
+    "section": "malformed-html-weird-tags",
+    "number": 42,
+    "options": {}
+  },
+  {
+    "name": "dash-tag",
+    "markdown": "<my-el>x</my-el>",
+    "html": "<p><my-el>x</my-el></p>",
+    "section": "malformed-html-weird-tags",
+    "number": 43,
+    "options": {}
+  },
+  {
+    "name": "dot-tag",
+    "markdown": "<a.b>x</a.b>",
+    "html": "<p><a.b>x</a.b></p>",
+    "section": "malformed-html-weird-tags",
+    "number": 44,
+    "options": {}
+  },
+  {
+    "name": "upper-tag",
+    "markdown": "<DIV>X</DIV>",
+    "html": "<DIV>X</DIV>",
+    "section": "malformed-html-weird-tags",
+    "number": 45,
+    "options": {}
+  },
+  {
+    "name": "mixed-case",
+    "markdown": "<DiV>x</dIv>",
+    "html": "<DiV>x</dIv>",
+    "section": "malformed-html-weird-tags",
+    "number": 46,
+    "options": {}
+  },
+  {
+    "name": "comment",
+    "markdown": "<!-- comment -->",
+    "html": "<!-- comment -->",
+    "section": "html-comments-cdata",
+    "number": 47,
+    "options": {}
+  },
+  {
+    "name": "comment-unclosed",
+    "markdown": "<!-- unclosed",
+    "html": "<p>&lt;!-- unclosed</p>",
+    "section": "html-comments-cdata",
+    "number": 48,
+    "options": {}
+  },
+  {
+    "name": "comment-bang",
+    "markdown": "<!--><b>x</b>",
+    "html": "<p><!--><b>x</b></p>",
+    "section": "html-comments-cdata",
+    "number": 49,
+    "options": {}
+  },
+  {
+    "name": "comment-dashes",
+    "markdown": "<!--- x --->",
+    "html": "<!--- x --->",
+    "section": "html-comments-cdata",
+    "number": 50,
+    "options": {}
+  },
+  {
+    "name": "cdata",
+    "markdown": "<![CDATA[x<y>z]]>",
+    "html": "<p>&lt;![CDATA[x<y>z]]&gt;</p>",
+    "section": "html-comments-cdata",
+    "number": 51,
+    "options": {}
+  },
+  {
+    "name": "doctype",
+    "markdown": "<!DOCTYPE html>",
+    "html": "<p><!DOCTYPE html></p>",
+    "section": "html-comments-cdata",
+    "number": 52,
+    "options": {}
+  },
+  {
+    "name": "xml-decl",
+    "markdown": "<?xml version=\"1.0\"?>",
+    "html": "<?xml version=\"1.0\"?>",
+    "section": "html-comments-cdata",
+    "number": 53,
+    "options": {}
+  },
+  {
+    "name": "php-tag",
+    "markdown": "<?php echo 1;?>",
+    "html": "<?php echo 1;?>",
+    "section": "html-comments-cdata",
+    "number": 54,
+    "options": {}
+  },
+  {
+    "name": "processing",
+    "markdown": "<?pi data?>",
+    "html": "<?pi data?>",
+    "section": "html-comments-cdata",
+    "number": 55,
+    "options": {}
+  },
+  {
+    "name": "br-slash",
+    "markdown": "<br/>",
+    "html": "<p><br/></p>",
+    "section": "html-self-closing",
+    "number": 56,
+    "options": {}
+  },
+  {
+    "name": "br-space-slash",
+    "markdown": "<br />",
+    "html": "<p><br /></p>",
+    "section": "html-self-closing",
+    "number": 57,
+    "options": {}
+  },
+  {
+    "name": "img-no-slash",
+    "markdown": "<img src=x>",
+    "html": "<p><img src=x></p>",
+    "section": "html-self-closing",
+    "number": 58,
+    "options": {}
+  },
+  {
+    "name": "hr-slash",
+    "markdown": "<hr/>",
+    "html": "<hr/>",
+    "section": "html-self-closing",
+    "number": 59,
+    "options": {}
+  },
+  {
+    "name": "space-br",
+    "markdown": "< br/>",
+    "html": "<p>< br/></p>",
+    "section": "html-self-closing",
+    "number": 60,
+    "options": {}
+  },
+  {
+    "name": "double-slash",
+    "markdown": "<br//>",
+    "html": "<p><br//></p>",
+    "section": "html-self-closing",
+    "number": 61,
+    "options": {}
+  },
+  {
+    "name": "void-nested",
+    "markdown": "a<br/>b<hr/>c",
+    "html": "<p>a<br/>b<hr/>c</p>",
+    "section": "html-self-closing",
+    "number": 62,
+    "options": {}
+  },
+  {
+    "name": "deep-div",
+    "markdown": "<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>x</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>",
+    "html": "<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>x</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>",
+    "section": "html-deep-nesting",
+    "number": 63,
+    "options": {}
+  },
+  {
+    "name": "deep-open-only",
+    "markdown": "<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>",
+    "html": "<p><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div></p>",
+    "section": "html-deep-nesting",
+    "number": 64,
+    "options": {}
+  },
+  {
+    "name": "deep-close-only",
+    "markdown": "</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>",
+    "html": "<p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p>",
+    "section": "html-deep-nesting",
+    "number": 65,
+    "options": {}
+  },
+  {
+    "name": "deep-mixed",
+    "markdown": "<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>",
+    "html": "<p><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>",
+    "section": "html-deep-nesting",
+    "number": 66,
+    "options": {}
+  },
+  {
+    "name": "empty-link",
+    "markdown": "[]()",
+    "html": "<p><a href=\"\"></a></p>",
+    "section": "markdown-empty-constructs",
+    "number": 67,
+    "options": {}
+  },
+  {
+    "name": "empty-link-spaces",
+    "markdown": "[](  )",
+    "html": "<p><a href=\"\"></a></p>",
+    "section": "markdown-empty-constructs",
+    "number": 68,
+    "options": {}
+  },
+  {
+    "name": "empty-image",
+    "markdown": "![]()",
+    "html": "<p>!<a href=\"\"></a></p>",
+    "section": "markdown-empty-constructs",
+    "number": 69,
+    "options": {}
+  },
+  {
+    "name": "just-brackets",
+    "markdown": "[]",
+    "html": "<p>[]</p>",
+    "section": "markdown-empty-constructs",
+    "number": 70,
+    "options": {}
+  },
+  {
+    "name": "just-parens",
+    "markdown": "()",
+    "html": "<p>()</p>",
+    "section": "markdown-empty-constructs",
+    "number": 71,
+    "options": {}
+  },
+  {
+    "name": "empty-angle-link",
+    "markdown": "[](<>)",
+    "html": "<p><a href=\"\"></a></p>",
+    "section": "markdown-empty-constructs",
+    "number": 72,
+    "options": {}
+  },
+  {
+    "name": "title-only",
+    "markdown": "[](\"t\")",
+    "html": "<p><a href=\"\" title=\"t\"></a></p>",
+    "section": "markdown-empty-constructs",
+    "number": 73,
+    "options": {}
+  },
+  {
+    "name": "link-no-close",
+    "markdown": "[a](b",
+    "html": "<p>[a](b</p>",
+    "section": "markdown-empty-constructs",
+    "number": 74,
+    "options": {}
+  },
+  {
+    "name": "reversed",
+    "markdown": "a](b)",
+    "html": "<p>a](b)</p>",
+    "section": "markdown-empty-constructs",
+    "number": 75,
+    "options": {}
+  },
+  {
+    "name": "open-brackets",
+    "markdown": "[[[",
+    "html": "<p>[[[</p>",
+    "section": "markdown-unbalanced",
+    "number": 76,
+    "options": {}
+  },
+  {
+    "name": "close-brackets",
+    "markdown": "]]]",
+    "html": "<p>]]]</p>",
+    "section": "markdown-unbalanced",
+    "number": 77,
+    "options": {}
+  },
+  {
+    "name": "bracket-mix",
+    "markdown": "[[]",
+    "html": "<p>[[]</p>",
+    "section": "markdown-unbalanced",
+    "number": 78,
+    "options": {}
+  },
+  {
+    "name": "bracket-mix2",
+    "markdown": "[]]",
+    "html": "<p>[]]</p>",
+    "section": "markdown-unbalanced",
+    "number": 79,
+    "options": {}
+  },
+  {
+    "name": "img-open",
+    "markdown": "![![![![![",
+    "html": "<p>![![![![![</p>",
+    "section": "markdown-unbalanced",
+    "number": 80,
+    "options": {}
+  },
+  {
+    "name": "star",
+    "markdown": "*",
+    "html": "<p>*</p>",
+    "section": "markdown-unbalanced",
+    "number": 81,
+    "options": {}
+  },
+  {
+    "name": "stars2",
+    "markdown": "**",
+    "html": "<p>**</p>",
+    "section": "markdown-unbalanced",
+    "number": 82,
+    "options": {}
+  },
+  {
+    "name": "stars3",
+    "markdown": "***",
+    "html": "<hr />",
+    "section": "markdown-unbalanced",
+    "number": 83,
+    "options": {}
+  },
+  {
+    "name": "stars5",
+    "markdown": "*****",
+    "html": "<hr />",
+    "section": "markdown-unbalanced",
+    "number": 84,
+    "options": {}
+  },
+  {
+    "name": "star-a",
+    "markdown": "*a",
+    "html": "<p>*a</p>",
+    "section": "markdown-unbalanced",
+    "number": 85,
+    "options": {}
+  },
+  {
+    "name": "a-star",
+    "markdown": "a*",
+    "html": "<p>a*</p>",
+    "section": "markdown-unbalanced",
+    "number": 86,
+    "options": {}
+  },
+  {
+    "name": "underscore",
+    "markdown": "_",
+    "html": "<p>_</p>",
+    "section": "markdown-unbalanced",
+    "number": 87,
+    "options": {}
+  },
+  {
+    "name": "unders2",
+    "markdown": "__",
+    "html": "<p>__</p>",
+    "section": "markdown-unbalanced",
+    "number": 88,
+    "options": {}
+  },
+  {
+    "name": "unders3",
+    "markdown": "___",
+    "html": "<hr />",
+    "section": "markdown-unbalanced",
+    "number": 89,
+    "options": {}
+  },
+  {
+    "name": "tilde",
+    "markdown": "~~",
+    "html": "<p>~~</p>",
+    "section": "markdown-unbalanced",
+    "number": 90,
+    "options": {}
+  },
+  {
+    "name": "tilde3",
+    "markdown": "~~~",
+    "html": "<pre><code>\n</code></pre>",
+    "section": "markdown-unbalanced",
+    "number": 91,
+    "options": {}
+  },
+  {
+    "name": "nested-emph",
+    "markdown": "*a_b*c_",
+    "html": "<p>*a<em>b*c</em></p>",
+    "section": "markdown-unbalanced",
+    "number": 92,
+    "options": {}
+  },
+  {
+    "name": "emph-strong",
+    "markdown": "**a*b**c*",
+    "html": "<p><strong>a*b</strong>c*</p>",
+    "section": "markdown-unbalanced",
+    "number": 93,
+    "options": {}
+  },
+  {
+    "name": "h1",
+    "markdown": "#",
+    "html": "<p>#</p>",
+    "section": "markdown-headings",
+    "number": 94,
+    "options": {}
+  },
+  {
+    "name": "h6",
+    "markdown": "######",
+    "html": "<h5 id=\"\">#</h5>",
+    "section": "markdown-headings",
+    "number": 95,
+    "options": {}
+  },
+  {
+    "name": "h7",
+    "markdown": "#######",
+    "html": "<h6 id=\"\">#</h6>",
+    "section": "markdown-headings",
+    "number": 96,
+    "options": {}
+  },
+  {
+    "name": "hash-space-hash",
+    "markdown": "# #",
+    "html": "<h1 id=\"\">#</h1>",
+    "section": "markdown-headings",
+    "number": 97,
+    "options": {}
+  },
+  {
+    "name": "hash-tab-hash",
+    "markdown": "#\t#",
+    "html": "<h1 id=\"\">#</h1>",
+    "section": "markdown-headings",
+    "number": 98,
+    "options": {}
+  },
+  {
+    "name": "no-space",
+    "markdown": "#nospace",
+    "html": "<h1 id=\"nospace\">nospace</h1>",
+    "section": "markdown-headings",
+    "number": 99,
+    "options": {}
+  },
+  {
+    "name": "spaced",
+    "markdown": " # ",
+    "html": "<h1 id=\"-\"> </h1>",
+    "section": "markdown-headings",
+    "number": 100,
+    "options": {}
+  },
+  {
+    "name": "many-hash-groups",
+    "markdown": "## ## ##",
+    "html": "<h2 id=\"\">##</h2>",
+    "section": "markdown-headings",
+    "number": 101,
+    "options": {}
+  },
+  {
+    "name": "closing-hashes",
+    "markdown": "# title #####",
+    "html": "<h1 id=\"title\">title</h1>",
+    "section": "markdown-headings",
+    "number": 102,
+    "options": {}
+  },
+  {
+    "name": "only-closing",
+    "markdown": "###### ######",
+    "html": "<h6 id=\"\">#</h6>",
+    "section": "markdown-headings",
+    "number": 103,
+    "options": {}
+  },
+  {
+    "name": "huge-closing",
+    "markdown": "# t ################################################################################",
+    "html": "<h1 id=\"t\">t</h1>",
+    "section": "markdown-headings",
+    "number": 104,
+    "options": {}
+  },
+  {
+    "name": "dash-space",
+    "markdown": "- ",
+    "html": "<ul>\n<li></li>\n</ul>",
+    "section": "markdown-lists-quotes",
+    "number": 105,
+    "options": {}
+  },
+  {
+    "name": "dash",
+    "markdown": "-",
+    "html": "<p>-</p>",
+    "section": "markdown-lists-quotes",
+    "number": 106,
+    "options": {}
+  },
+  {
+    "name": "dash-dash-dash",
+    "markdown": "- - -",
+    "html": "<hr />",
+    "section": "markdown-lists-quotes",
+    "number": 107,
+    "options": {}
+  },
+  {
+    "name": "ordered",
+    "markdown": "1.",
+    "html": "<p>1.</p>",
+    "section": "markdown-lists-quotes",
+    "number": 108,
+    "options": {}
+  },
+  {
+    "name": "ordered-chain",
+    "markdown": "1. 2. 3.",
+    "html": "<ol>\n<li>2. 3.</li>\n</ol>",
+    "section": "markdown-lists-quotes",
+    "number": 109,
+    "options": {}
+  },
+  {
+    "name": "mixed-markers",
+    "markdown": "* + -",
+    "html": "<ul>\n<li>+ -</li>\n</ul>",
+    "section": "markdown-lists-quotes",
+    "number": 110,
+    "options": {}
+  },
+  {
+    "name": "list-lines",
+    "markdown": "-\n-\n-",
+    "html": "<h2 id=\"-\n-\">-\n-</h2>",
+    "section": "markdown-lists-quotes",
+    "number": 111,
+    "options": {}
+  },
+  {
+    "name": "quote",
+    "markdown": ">",
+    "html": "<p>&gt;</p>",
+    "section": "markdown-lists-quotes",
+    "number": 112,
+    "options": {}
+  },
+  {
+    "name": "quote-space",
+    "markdown": "> ",
+    "html": "<blockquote>\n  \n</blockquote>",
+    "section": "markdown-lists-quotes",
+    "number": 113,
+    "options": {}
+  },
+  {
+    "name": "quotes",
+    "markdown": ">>>",
+    "html": "<blockquote>\n  <blockquote>\n    <p>&gt;</p>\n  </blockquote>\n</blockquote>",
+    "section": "markdown-lists-quotes",
+    "number": 114,
+    "options": {}
+  },
+  {
+    "name": "quote-chain",
+    "markdown": "> > >",
+    "html": "<blockquote>\n  <blockquote>\n    <p>&gt;</p>\n  </blockquote>\n</blockquote>",
+    "section": "markdown-lists-quotes",
+    "number": 115,
+    "options": {}
+  },
+  {
+    "name": "quote-lines",
+    "markdown": ">x\n>y\n>z",
+    "html": "<blockquote>\n  <p>x\n  y\n  z</p>\n</blockquote>",
+    "section": "markdown-lists-quotes",
+    "number": 116,
+    "options": {}
+  },
+  {
+    "name": "nested-list",
+    "markdown": "- a\n  - b\n    - c",
+    "html": "<ul>\n<li>a</li>\n<li>b<ul>\n<li>c</li></ul></li>\n</ul>",
+    "section": "markdown-lists-quotes",
+    "number": 117,
+    "options": {}
+  },
+  {
+    "name": "backtick-unclosed",
+    "markdown": "`x",
+    "html": "<p>`x</p>",
+    "section": "markdown-code-hr",
+    "number": 118,
+    "options": {}
+  },
+  {
+    "name": "triple-backtick",
+    "markdown": "```",
+    "html": "<pre><code>\n</code></pre>",
+    "section": "markdown-code-hr",
+    "number": 119,
+    "options": {}
+  },
+  {
+    "name": "tilde-fence",
+    "markdown": "~~~",
+    "html": "<pre><code>\n</code></pre>",
+    "section": "markdown-code-hr",
+    "number": 120,
+    "options": {}
+  },
+  {
+    "name": "fence-lang",
+    "markdown": "```lang",
+    "html": "<pre><code class=\"lang language-lang\">\n</code></pre>",
+    "section": "markdown-code-hr",
+    "number": 121,
+    "options": {}
+  },
+  {
+    "name": "indented",
+    "markdown": "    code",
+    "html": "<pre><code>code\n</code></pre>",
+    "section": "markdown-code-hr",
+    "number": 122,
+    "options": {}
+  },
+  {
+    "name": "tab-indented",
+    "markdown": "\tcode",
+    "html": "<pre><code>code\n</code></pre>",
+    "section": "markdown-code-hr",
+    "number": 123,
+    "options": {}
+  },
+  {
+    "name": "hr-dash",
+    "markdown": "---",
+    "html": "<hr />",
+    "section": "markdown-code-hr",
+    "number": 124,
+    "options": {}
+  },
+  {
+    "name": "hr-star",
+    "markdown": "***",
+    "html": "<hr />",
+    "section": "markdown-code-hr",
+    "number": 125,
+    "options": {}
+  },
+  {
+    "name": "hr-under",
+    "markdown": "___",
+    "html": "<hr />",
+    "section": "markdown-code-hr",
+    "number": 126,
+    "options": {}
+  },
+  {
+    "name": "hr-spaced",
+    "markdown": "- - -",
+    "html": "<hr />",
+    "section": "markdown-code-hr",
+    "number": 127,
+    "options": {}
+  },
+  {
+    "name": "hr-long",
+    "markdown": "----------",
+    "html": "<hr />",
+    "section": "markdown-code-hr",
+    "number": 128,
+    "options": {}
+  },
+  {
+    "name": "inline-code-many",
+    "markdown": "```````",
+    "html": "<pre><code>\n</code></pre>",
+    "section": "markdown-code-hr",
+    "number": 129,
+    "options": {}
+  },
+  {
+    "name": "amp",
+    "markdown": "&",
+    "html": "<p>&amp;</p>",
+    "section": "markdown-entities",
+    "number": 130,
+    "options": {}
+  },
+  {
+    "name": "amp-entity",
+    "markdown": "&amp;",
+    "html": "<p>&amp;</p>",
+    "section": "markdown-entities",
+    "number": 131,
+    "options": {}
+  },
+  {
+    "name": "hash-only",
+    "markdown": "&#",
+    "html": "<p>&amp;#</p>",
+    "section": "markdown-entities",
+    "number": 132,
+    "options": {}
+  },
+  {
+    "name": "hex-start",
+    "markdown": "&#x",
+    "html": "<p>&amp;#x</p>",
+    "section": "markdown-entities",
+    "number": 133,
+    "options": {}
+  },
+  {
+    "name": "bad-hex",
+    "markdown": "&#xZZ;",
+    "html": "<p>&#xZZ;</p>",
+    "section": "markdown-entities",
+    "number": 134,
+    "options": {}
+  },
+  {
+    "name": "fake-entity",
+    "markdown": "&notanentity;",
+    "html": "<p>&notanentity;</p>",
+    "section": "markdown-entities",
+    "number": 135,
+    "options": {}
+  },
+  {
+    "name": "amp-angles",
+    "markdown": "&<>&",
+    "html": "<p>&amp;&lt;&gt;&amp;</p>",
+    "section": "markdown-entities",
+    "number": 136,
+    "options": {}
+  },
+  {
+    "name": "huge-codepoint",
+    "markdown": "&#999999999;",
+    "html": "<p>&#999999999;</p>",
+    "section": "markdown-entities",
+    "number": 137,
+    "options": {}
+  },
+  {
+    "name": "many-amps",
+    "markdown": "&&&&&&&&&&",
+    "html": "<p>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</p>",
+    "section": "markdown-entities",
+    "number": 138,
+    "options": {}
+  },
+  {
+    "name": "many-spaces",
+    "markdown": "a                              b",
+    "html": "<p>a                              b</p>",
+    "section": "whitespace-control",
+    "number": 139,
+    "options": {}
+  },
+  {
+    "name": "tabs",
+    "markdown": "a\t\t\tb",
+    "html": "<p>a\t\t\tb</p>",
+    "section": "whitespace-control",
+    "number": 140,
+    "options": {}
+  },
+  {
+    "name": "crlf",
+    "markdown": "a\r\nb\rc\nd",
+    "html": "<p>a\nb\nc\nd</p>",
+    "section": "whitespace-control",
+    "number": 141,
+    "options": {}
+  },
+  {
+    "name": "only-spaces",
+    "markdown": "     ",
+    "html": "",
+    "section": "whitespace-control",
+    "number": 142,
+    "options": {}
+  },
+  {
+    "name": "only-tabs",
+    "markdown": "\t\t\t",
+    "html": "",
+    "section": "whitespace-control",
+    "number": 143,
+    "options": {}
+  },
+  {
+    "name": "only-newlines",
+    "markdown": "\n\n\n",
+    "html": "",
+    "section": "whitespace-control",
+    "number": 144,
+    "options": {}
+  },
+  {
+    "name": "trailing",
+    "markdown": "  # h  ",
+    "html": "<h1 id=\"h\">h</h1>",
+    "section": "whitespace-control",
+    "number": 145,
+    "options": {}
+  },
+  {
+    "name": "wrapped-tabs",
+    "markdown": "\ttext\t",
+    "html": "<pre><code>text\t\n</code></pre>",
+    "section": "whitespace-control",
+    "number": 146,
+    "options": {}
+  },
+  {
+    "name": "mixed-eol",
+    "markdown": "a\r\n\r\nb",
+    "html": "<p>a</p>\n<p>b</p>",
+    "section": "whitespace-control",
+    "number": 147,
+    "options": {}
+  },
+  {
+    "name": "emoji",
+    "markdown": "😀 hello 🎉",
+    "html": "<p>😀 hello 🎉</p>",
+    "section": "unicode-emoji",
+    "number": 148,
+    "options": {
+      "emoji": true
+    }
+  },
+  {
+    "name": "accents",
+    "markdown": "café résumé naïve",
+    "html": "<p>café résumé naïve</p>",
+    "section": "unicode-emoji",
+    "number": 149,
+    "options": {
+      "emoji": true
+    }
+  },
+  {
+    "name": "rtl",
+    "markdown": "مرحبا بالعالم",
+    "html": "<p>مرحبا بالعالم</p>",
+    "section": "unicode-emoji",
+    "number": 150,
+    "options": {
+      "emoji": true
+    }
+  },
+  {
+    "name": "combining",
+    "markdown": "áè",
+    "html": "<p>áè</p>",
+    "section": "unicode-emoji",
+    "number": 151,
+    "options": {
+      "emoji": true
+    }
+  },
+  {
+    "name": "zero-width",
+    "markdown": "a​b‌c",
+    "html": "<p>a​b‌c</p>",
+    "section": "unicode-emoji",
+    "number": 152,
+    "options": {
+      "emoji": true
+    }
+  },
+  {
+    "name": "math-alnum",
+    "markdown": "𝕳𝖊𝖑𝖑𝖔",
+    "html": "<p>𝕳𝖊𝖑𝖑𝖔</p>",
+    "section": "unicode-emoji",
+    "number": 153,
+    "options": {
+      "emoji": true
+    }
+  },
+  {
+    "name": "emoji-code",
+    "markdown": ":smile: :+1: :notreal:",
+    "html": "<p>😄 👍 :notreal:</p>",
+    "section": "unicode-emoji",
+    "number": 154,
+    "options": {
+      "emoji": true
+    }
+  },
+  {
+    "name": "cjk",
+    "markdown": "日本語のテキスト",
+    "html": "<p>日本語のテキスト</p>",
+    "section": "unicode-emoji",
+    "number": 155,
+    "options": {
+      "emoji": true
+    }
+  },
+  {
+    "name": "surrogate-in-link",
+    "markdown": "[😀](http://x)",
+    "html": "<p><a href=\"http://x\">😀</a></p>",
+    "section": "unicode-emoji",
+    "number": 156,
+    "options": {
+      "emoji": true
+    }
+  },
+  {
+    "name": "single-pipe",
+    "markdown": "|",
+    "html": "<p>|</p>",
+    "section": "tables-malformed",
+    "number": 157,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "double-pipe",
+    "markdown": "||",
+    "html": "<p>||</p>",
+    "section": "tables-malformed",
+    "number": 158,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "one-cell",
+    "markdown": "|a|",
+    "html": "<p>|a|</p>",
+    "section": "tables-malformed",
+    "number": 159,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "no-pipes",
+    "markdown": "a b c",
+    "html": "<p>a b c</p>",
+    "section": "tables-malformed",
+    "number": 160,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "header-no-body",
+    "markdown": "| a | b |\n|---|---|",
+    "html": "<table>\n<thead>\n<tr>\n<th>a</th>\n<th>b</th>\n</tr>\n</thead>\n<tbody>\n</tbody>\n</table>",
+    "section": "tables-malformed",
+    "number": 161,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "sep-only",
+    "markdown": "|---|---|",
+    "html": "<p>|---|---|</p>",
+    "section": "tables-malformed",
+    "number": 162,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "ragged",
+    "markdown": "| a | b |\n|---|---|\n| 1 |",
+    "html": "<table>\n<thead>\n<tr>\n<th>a</th>\n<th>b</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td></td>\n</tr>\n</tbody>\n</table>",
+    "section": "tables-malformed",
+    "number": 163,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "too-many-cols",
+    "markdown": "| a | b |\n|---|---|\n| 1 | 2 | 3 |",
+    "html": "<table>\n<thead>\n<tr>\n<th>a</th>\n<th>b</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>2</td>\n</tr>\n</tbody>\n</table>",
+    "section": "tables-malformed",
+    "number": 164,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "equals-sep",
+    "markdown": "| a |\n|===|\n| x |",
+    "html": "<table>\n<thead>\n<tr>\n<th>a</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>x</td>\n</tr>\n</tbody>\n</table>",
+    "section": "tables-malformed",
+    "number": 165,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "pipes-no-sep",
+    "markdown": "|a|b|c|d|",
+    "html": "<p>|a|b|c|d|</p>",
+    "section": "tables-malformed",
+    "number": 166,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "escaped-pipe",
+    "markdown": "a \\| b\n|---|\n| 1 |",
+    "html": "<p>a | b\n|---|\n| 1 |</p>",
+    "section": "tables-malformed",
+    "number": 167,
+    "options": {
+      "tables": true
+    }
+  },
+  {
+    "name": "empty-ref",
+    "markdown": "[^]",
+    "html": "<p>[^]</p>",
+    "section": "footnotes-malformed",
+    "number": 168,
+    "options": {
+      "footnotes": true
+    }
+  },
+  {
+    "name": "space-ref",
+    "markdown": "[^ ]",
+    "html": "<p>[^ ]</p>",
+    "section": "footnotes-malformed",
+    "number": 169,
+    "options": {
+      "footnotes": true
+    }
+  },
+  {
+    "name": "ref-no-def",
+    "markdown": "[^a] text",
+    "html": "<p>[^a] text</p>",
+    "section": "footnotes-malformed",
+    "number": 170,
+    "options": {
+      "footnotes": true
+    }
+  },
+  {
+    "name": "def-no-ref",
+    "markdown": "[^a]: orphan",
+    "html": "",
+    "section": "footnotes-malformed",
+    "number": 171,
+    "options": {
+      "footnotes": true
+    }
+  },
+  {
+    "name": "dup-def",
+    "markdown": "[^a]: one\n[^a]: two\n\n[^a]",
+    "html": "<p><sup class=\"footnote-ref\"><a href=\"#fn-a\" id=\"fnref-a\" data-footnote-ref>1</a></sup></p>\n<section class=\"footnotes\" data-footnotes>\n<ol>\n<li id=\"fn-a\">\n<p>one <a href=\"#fnref-a\" class=\"footnote-backref\" data-footnote-backref data-footnote-backref-idx=\"1\" aria-label=\"Back to reference 1\">↩</a></p>\n</li>\n</ol>\n</section>\n",
+    "section": "footnotes-malformed",
+    "number": 172,
+    "options": {
+      "footnotes": true
+    }
+  },
+  {
+    "name": "space-in-label",
+    "markdown": "[^a b]",
+    "html": "<p>[^a b]</p>",
+    "section": "footnotes-malformed",
+    "number": 173,
+    "options": {
+      "footnotes": true
+    }
+  },
+  {
+    "name": "ref-and-def",
+    "markdown": "see[^n]\n\n[^n]: note",
+    "html": "<p>see<sup class=\"footnote-ref\"><a href=\"#fn-n\" id=\"fnref-n\" data-footnote-ref>1</a></sup></p>\n<section class=\"footnotes\" data-footnotes>\n<ol>\n<li id=\"fn-n\">\n<p>note <a href=\"#fnref-n\" class=\"footnote-backref\" data-footnote-backref data-footnote-backref-idx=\"1\" aria-label=\"Back to reference 1\">↩</a></p>\n</li>\n</ol>\n</section>\n",
+    "section": "footnotes-malformed",
+    "number": 174,
+    "options": {
+      "footnotes": true
+    }
+  },
+  {
+    "name": "nested-ref",
+    "markdown": "[^[^x]]",
+    "html": "<p>[^[^x]]</p>",
+    "section": "footnotes-malformed",
+    "number": 175,
+    "options": {
+      "footnotes": true
+    }
+  },
+  {
+    "name": "escaped-ref",
+    "markdown": "\\[^a]",
+    "html": "<p>[^a]</p>",
+    "section": "footnotes-malformed",
+    "number": 176,
+    "options": {
+      "footnotes": true
+    }
+  },
+  {
+    "name": "html-in-em",
+    "markdown": "*<a href=\"x\">link</a>*",
+    "html": "<p><em><a href=\"x\">link</a></em></p>",
+    "section": "combined-mixed",
+    "number": 177,
+    "options": {
+      "tables": true,
+      "footnotes": true,
+      "emoji": true,
+      "ghMentions": true,
+      "strikethrough": true,
+      "tasklists": true
+    }
+  },
+  {
+    "name": "em-in-html",
+    "markdown": "<b>**bold**</b>",
+    "html": "<p><b><strong>bold</strong></b></p>",
+    "section": "combined-mixed",
+    "number": 178,
+    "options": {
+      "tables": true,
+      "footnotes": true,
+      "emoji": true,
+      "ghMentions": true,
+      "strikethrough": true,
+      "tasklists": true
+    }
+  },
+  {
+    "name": "html-in-quote",
+    "markdown": "> <div>quoted html</div>",
+    "html": "<blockquote>\n  <div>quoted html</div>\n</blockquote>",
+    "section": "combined-mixed",
+    "number": 179,
+    "options": {
+      "tables": true,
+      "footnotes": true,
+      "emoji": true,
+      "ghMentions": true,
+      "strikethrough": true,
+      "tasklists": true
+    }
+  },
+  {
+    "name": "task-with-html",
+    "markdown": "- [x] <b>done</b>",
+    "html": "<ul>\n<li><input checked disabled type=\"checkbox\"> <b>done</b></li>\n</ul>",
+    "section": "combined-mixed",
+    "number": 180,
+    "options": {
+      "tables": true,
+      "footnotes": true,
+      "emoji": true,
+      "ghMentions": true,
+      "strikethrough": true,
+      "tasklists": true
+    }
+  },
+  {
+    "name": "everything",
+    "markdown": "# H :tada:\n\n> quote **b** ~~s~~\n\n| a | b |\n|---|---|\n| 1 | @user |\n\n<div>raw</div>\n\n[^f]\n\n[^f]: note",
+    "html": "<h1 id=\"h-tada\">H 🎉</h1>\n<blockquote>\n  <p>quote <strong>b</strong> <del>s</del></p>\n</blockquote>\n<table>\n<thead>\n<tr>\n<th>a</th>\n<th>b</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td><a href=\"https://github.com/user\">@user</a></td>\n</tr>\n</tbody>\n</table>\n<div>raw</div>\n<p><sup class=\"footnote-ref\"><a href=\"#fn-f\" id=\"fnref-f\" data-footnote-ref>1</a></sup></p>\n<section class=\"footnotes\" data-footnotes>\n<ol>\n<li id=\"fn-f\">\n<p>note <a href=\"#fnref-f\" class=\"footnote-backref\" data-footnote-backref data-footnote-backref-idx=\"1\" aria-label=\"Back to reference 1\">↩</a></p>\n</li>\n</ol>\n</section>\n",
+    "section": "combined-mixed",
+    "number": 181,
+    "options": {
+      "tables": true,
+      "footnotes": true,
+      "emoji": true,
+      "ghMentions": true,
+      "strikethrough": true,
+      "tasklists": true
+    }
+  },
+  {
+    "name": "mention-in-link",
+    "markdown": "[@user](http://x)",
+    "html": "<p><a href=\"http://x\">@user</a></p>",
+    "section": "combined-mixed",
+    "number": 182,
+    "options": {
+      "tables": true,
+      "footnotes": true,
+      "emoji": true,
+      "ghMentions": true,
+      "strikethrough": true,
+      "tasklists": true
+    }
+  },
+  {
+    "name": "strike-link",
+    "markdown": "~~[a](b)~~",
+    "html": "<p><del><a href=\"b\">a</a></del></p>",
+    "section": "combined-mixed",
+    "number": 183,
+    "options": {
+      "tables": true,
+      "footnotes": true,
+      "emoji": true,
+      "ghMentions": true,
+      "strikethrough": true,
+      "tasklists": true
+    }
+  },
+  {
+    "name": "html-comment-mid",
+    "markdown": "before <!-- c --> after",
+    "html": "<p>before <!-- c --> after</p>",
+    "section": "combined-mixed",
+    "number": 184,
+    "options": {
+      "tables": true,
+      "footnotes": true,
+      "emoji": true,
+      "ghMentions": true,
+      "strikethrough": true,
+      "tasklists": true
+    }
+  },
+  {
+    "name": "script-in-md",
+    "markdown": "text <script>alert(1)</script> text",
+    "html": "<p>text <script>alert(1)</script> text</p>",
+    "section": "combined-mixed",
+    "number": 185,
+    "options": {
+      "tables": true,
+      "footnotes": true,
+      "emoji": true,
+      "ghMentions": true,
+      "strikethrough": true,
+      "tasklists": true
+    }
+  },
+  {
+    "name": "open-only",
+    "markdown": "<div>",
+    "html": "<div>",
+    "section": "cmspec-malformed",
+    "number": 186,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "close-only",
+    "markdown": "</div>",
+    "html": "</div>",
+    "section": "cmspec-malformed",
+    "number": 187,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "misaligned",
+    "markdown": "<b>x</i>",
+    "html": "<p><b>x</i></p>",
+    "section": "cmspec-malformed",
+    "number": 188,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "garbage",
+    "markdown": "<<>>",
+    "html": "<p>&lt;&lt;&gt;&gt;</p>",
+    "section": "cmspec-malformed",
+    "number": 189,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "autolink-empty",
+    "markdown": "<>",
+    "html": "<p>&lt;&gt;</p>",
+    "section": "cmspec-malformed",
+    "number": 190,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "autolink-bad",
+    "markdown": "<not a url>",
+    "html": "<not a url>",
+    "section": "cmspec-malformed",
+    "number": 191,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "autolink-scheme",
+    "markdown": "<http://>",
+    "html": "<p><a href=\"http://\">http://</a></p>",
+    "section": "cmspec-malformed",
+    "number": 192,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "emphasis-run",
+    "markdown": "********************",
+    "html": "<hr />",
+    "section": "cmspec-malformed",
+    "number": 193,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "bracket-run",
+    "markdown": "[[[[[[[[[[[[[[[[[[[[",
+    "html": "<p>[[[[[[[[[[[[[[[[[[[[</p>",
+    "section": "cmspec-malformed",
+    "number": 194,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "entity",
+    "markdown": "&amp; &#x41; &fake;",
+    "html": "<p>&amp; A &amp;fake;</p>",
+    "section": "cmspec-malformed",
+    "number": 195,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "deep-emphasis",
+    "markdown": "*a*b*c*d*e*",
+    "html": "<p><em>a</em>b<em>c</em>d<em>e</em></p>",
+    "section": "cmspec-malformed",
+    "number": 196,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "link-nested",
+    "markdown": "[a[b]c](d)",
+    "html": "<p><a href=\"d\">a[b]c</a></p>",
+    "section": "cmspec-malformed",
+    "number": 197,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "raw-html-span",
+    "markdown": "x <span>y</span> z",
+    "html": "<p>x <span>y</span> z</p>",
+    "section": "cmspec-malformed",
+    "number": 198,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "unclosed-code",
+    "markdown": "`code",
+    "html": "<p>`code</p>",
+    "section": "cmspec-malformed",
+    "number": 199,
+    "options": {
+      "cmSpec": true
+    }
+  },
+  {
+    "name": "raw-a-js",
+    "markdown": "<a href=\"javascript:alert(1)\">x</a>",
+    "html": "<p><a href=\"\">x</a></p>",
+    "section": "safemode-malformed",
+    "number": 200,
+    "options": {
+      "safeMode": true
+    }
+  },
+  {
+    "name": "img-onerror",
+    "markdown": "<img src=x onerror=alert(1)>",
+    "html": "<p><img src=x></p>",
+    "section": "safemode-malformed",
+    "number": 201,
+    "options": {
+      "safeMode": true
+    }
+  },
+  {
+    "name": "script",
+    "markdown": "<script>alert(1)</script>",
+    "html": "&lt;script>alert(1)&lt;/script>",
+    "section": "safemode-malformed",
+    "number": 202,
+    "options": {
+      "safeMode": true
+    }
+  },
+  {
+    "name": "svg-onload",
+    "markdown": "<svg onload=alert(1)></svg>",
+    "html": "<p>&lt;svg>&lt;/svg></p>",
+    "section": "safemode-malformed",
+    "number": 203,
+    "options": {
+      "safeMode": true
+    }
+  },
+  {
+    "name": "open-only",
+    "markdown": "<a href=\"javascript:x\">",
+    "html": "<p><a href=\"\"></p>",
+    "section": "safemode-malformed",
+    "number": 204,
+    "options": {
+      "safeMode": true
+    }
+  },
+  {
+    "name": "misaligned-handler",
+    "markdown": "<b onclick=x><i>y</b></i>",
+    "html": "<p><b><i>y</b></i></p>",
+    "section": "safemode-malformed",
+    "number": 205,
+    "options": {
+      "safeMode": true
+    }
+  },
+  {
+    "name": "md-js-link",
+    "markdown": "[click](javascript:alert(1))",
+    "html": "<p><a href=\"\">click</a></p>",
+    "section": "safemode-malformed",
+    "number": 206,
+    "options": {
+      "safeMode": true
+    }
+  },
+  {
+    "name": "data-image",
+    "markdown": "![i](data:image/png;base64,AAAA)",
+    "html": "<p><img src=\"data:image/png;base64,AAAA\" alt=\"i\" /></p>",
+    "section": "safemode-malformed",
+    "number": 207,
+    "options": {
+      "safeMode": true
+    }
+  },
+  {
+    "name": "mixed-scheme",
+    "markdown": "<a href=\"vbscript:x\">y</a> and [z](javascript:1)",
+    "html": "<p><a href=\"\">y</a> and <a href=\"\">z</a></p>",
+    "section": "safemode-malformed",
+    "number": 208,
+    "options": {
+      "safeMode": true
+    }
+  }
+]

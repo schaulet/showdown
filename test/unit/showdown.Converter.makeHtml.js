@@ -93,4 +93,19 @@ describe('showdown.Converter', function () {
       expect(converter.getMetadataFormat()).toBe(expectedFormat);
     });
   });
+
+  describe('makeHtml() metadata must not break out of the document head (completeHTMLDocument)', function () {
+    let converter = new showdown.Converter({metadata: true, completeHTMLDocument: true});
+
+    it('should entity-escape < and > in the title so it cannot close <title> and inject markup', function () {
+      let html = converter.makeHtml('---\ntitle: </title><script>alert(1)</script>\n---\n\n# hi');
+      expect(html).toContain('<title>&lt;/title&gt;&lt;script&gt;alert(1)&lt;/script&gt;</title>');
+      expect(html).not.toContain('<script>alert(1)</script>');
+    });
+
+    it('should entity-escape < and > in the doctype so it cannot inject markup', function () {
+      let html = converter.makeHtml('---\ndoctype: html><script>alert(1)</script\n---\n\n# hi');
+      expect(html).not.toContain('<script>alert(1)</script');
+    });
+  });
 });

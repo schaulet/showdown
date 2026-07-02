@@ -17,5 +17,14 @@ describe('showdown.Converter', function () {
       expect(converter.makeMarkdown(html)).toBe(md);
     });
 
+    it('should parse untrusted html in an inert document (no script/onerror execution)', function () {
+      // parseHTML must not reuse the live ambient document; it parses into an inert
+      // document (createHTMLDocument) so <img onerror>/<svg onload> never fire client-side.
+      let div = showdown.helper.parseHTML('<img src=x onerror="window.__xss=1">');
+      expect(div.ownerDocument).not.toBe(showdown.helper.document);
+      // sanity: the markup still parsed and is walkable
+      expect(converter.makeMarkdown('<img src=x onerror="window.__xss=1">')).toBe('![](<x>)');
+    });
+
   });
 });

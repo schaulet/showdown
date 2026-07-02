@@ -261,3 +261,47 @@ describe('repeat()', function () {
     }
   });
 });
+
+describe('_populateAttributes()', function () {
+  'use strict';
+  it('should encode a literal double-quote in a value so it cannot break out of the attribute', function () {
+    let out = showdown.helper._populateAttributes({href: 'x" onmouseover=alert(1)'});
+    expect(out).toBe(' href="x&quot; onmouseover=alert(1)"');
+  });
+  it('should not double-encode values already escaped by core callers', function () {
+    let out = showdown.helper._populateAttributes({href: 'a&quot;b'});
+    expect(out).toBe(' href="a&quot;b"');
+  });
+  it('should leave normal values untouched', function () {
+    expect(showdown.helper._populateAttributes({href: 'http://x.com', title: 'hi'}))
+      .toBe(' href="http://x.com" title="hi"');
+  });
+});
+
+describe('isSafeUrl()', function () {
+  'use strict';
+  let isSafe = showdown.helper.isSafeUrl;
+  it('should block dangerous schemes including obfuscated forms', function () {
+    ['javascript:alert(1)', 'JavaScript:alert(1)', ' javascript:x', 'java\tscript:x',
+      'java&#115;cript:x', 'vbscript:x', 'data:text/html,x'].forEach(function (u) {
+      expect(isSafe(u)).toBe(false);
+    });
+  });
+  it('should allow safe and relative urls', function () {
+    ['http://x', 'https://x/a?b=1', '/rel', './rel', '#frag', '//host', 'mailto:a@b', 'tel:+1', 'ftp://f']
+      .forEach(function (u) { expect(isSafe(u)).toBe(true); });
+  });
+  it('should only allow data:image when allowDataImage is set', function () {
+    expect(isSafe('data:image/png;base64,AAAA')).toBe(false);
+    expect(isSafe('data:image/png;base64,AAAA', {allowDataImage: true})).toBe(true);
+    expect(isSafe('data:text/html,x', {allowDataImage: true})).toBe(false);
+  });
+});
+
+describe('escapeHTMLEntities()', function () {
+  'use strict';
+  it('should escape & < > "', function () {
+    expect(showdown.helper.escapeHTMLEntities('<a href="x">&</a>'))
+      .toBe('&lt;a href=&quot;x&quot;&gt;&amp;&lt;/a&gt;');
+  });
+});
