@@ -9,7 +9,7 @@ let showdown = {},
     setFlavor = 'vanilla',
     flavor = {
       commonmark: {
-        noHeaderId:                           true,
+        headerIds:                            false,
         requireSpaceBeforeHeadingText:        true,
         decodeEntities:                       true,
         cmSpec:                               true,
@@ -17,7 +17,7 @@ let showdown = {},
         encodeEmails:                         false
       },
       gfm: {
-        noHeaderId:                           true,
+        headerIds:                            false,
         requireSpaceBeforeHeadingText:        true,
         decodeEntities:                       true,
         cmSpec:                               true,
@@ -39,7 +39,7 @@ let showdown = {},
         //backslashEscapesHTMLTags:             true,
       },
       original: {
-        noHeaderId:                           true,
+        headerIds:                            false,
         ghCodeBlocks:                         false,
         strikethrough:                        false
       },
